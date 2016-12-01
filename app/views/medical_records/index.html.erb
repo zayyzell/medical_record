@@ -1,0 +1,83 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Medical Records</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Anemia</th>
+      <th>Angina</th>
+      <th>Asthma</th>
+      <th>Cancer</th>
+      <th>Cataracts</th>
+      <th>Colities</th>
+      <th>Crohns disease</th>
+      <th>Diabetes</th>
+      <th>Emphysema</th>
+      <th>Epilepsy</th>
+      <th>Goiter</th>
+      <th>Heart murmur</th>
+      <th>Heart problems</th>
+      <th>Hepatitis</th>
+      <th>High blood pressure</th>
+      <th>High cholesterol</th>
+      <th>Hiv aids</th>
+      <th>Hypothyroidism</th>
+      <th>Jaundice</th>
+      <th>Kidney disease</th>
+      <th>Kidney stones</th>
+      <th>Leukemia</th>
+      <th>Pneumonia</th>
+      <th>Psoriasis</th>
+      <th>Pulmonary embolism</th>
+      <th>Rheumatic fever</th>
+      <th>Stomach peptic ulcer</th>
+      <th>Stroke</th>
+      <th>Tuberculosis</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @medical_records.each do |medical_record| %>
+      <tr>
+        <td><%= medical_record.anemia %></td>
+        <td><%= medical_record.angina %></td>
+        <td><%= medical_record.asthma %></td>
+        <td><%= medical_record.cancer %></td>
+        <td><%= medical_record.cataracts %></td>
+        <td><%= medical_record.colities %></td>
+        <td><%= medical_record.crohns_disease %></td>
+        <td><%= medical_record.diabetes %></td>
+        <td><%= medical_record.emphysema %></td>
+        <td><%= medical_record.epilepsy %></td>
+        <td><%= medical_record.goiter %></td>
+        <td><%= medical_record.heart_murmur %></td>
+        <td><%= medical_record.heart_problems %></td>
+        <td><%= medical_record.hepatitis %></td>
+        <td><%= medical_record.high_blood_pressure %></td>
+        <td><%= medical_record.high_cholesterol %></td>
+        <td><%= medical_record.hiv_aids %></td>
+        <td><%= medical_record.hypothyroidism %></td>
+        <td><%= medical_record.jaundice %></td>
+        <td><%= medical_record.kidney_disease %></td>
+        <td><%= medical_record.kidney_stones %></td>
+        <td><%= medical_record.leukemia %></td>
+        <td><%= medical_record.pneumonia %></td>
+        <td><%= medical_record.psoriasis %></td>
+        <td><%= medical_record.pulmonary_embolism %></td>
+        <td><%= medical_record.rheumatic_fever %></td>
+        <td><%= medical_record.stomach_peptic_ulcer %></td>
+        <td><%= medical_record.stroke %></td>
+        <td><%= medical_record.tuberculosis %></td>
+        <td><%= link_to 'Show', medical_record %></td>
+        <td><%= link_to 'Edit', edit_medical_record_path(medical_record) %></td>
+        <td><%= link_to 'Destroy', medical_record, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Medical Record', new_medical_record_path %>

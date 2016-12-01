@@ -1,0 +1,2 @@
+json.extract! medical_record, :id, :anemia, :angina, :asthma, :cancer, :cataracts, :colities, :crohns_disease, :diabetes, :emphysema, :epilepsy, :goiter, :heart_murmur, :heart_problems, :hepatitis, :high_blood_pressure, :high_cholesterol, :hiv_aids, :hypothyroidism, :jaundice, :kidney_disease, :kidney_stones, :leukemia, :pneumonia, :psoriasis, :pulmonary_embolism, :rheumatic_fever, :stomach_peptic_ulcer, :stroke, :tuberculosis, :created_at, :updated_at
+json.url medical_record_url(medical_record, format: :json)

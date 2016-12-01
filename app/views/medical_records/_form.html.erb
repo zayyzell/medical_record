@@ -1,0 +1,162 @@
+<%= form_for(medical_record) do |f| %>
+  <% if medical_record.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(medical_record.errors.count, "error") %> prohibited this medical_record from being saved:</h2>
+
+      <ul>
+      <% medical_record.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :anemia %>
+    <%= f.check_box :anemia %>
+  </div>
+
+  <div class="field">
+    <%= f.label :angina %>
+    <%= f.check_box :angina %>
+  </div>
+
+  <div class="field">
+    <%= f.label :asthma %>
+    <%= f.check_box :asthma %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cancer %>
+    <%= f.text_area :cancer %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cataracts %>
+    <%= f.check_box :cataracts %>
+  </div>
+
+  <div class="field">
+    <%= f.label :colities %>
+    <%= f.check_box :colities %>
+  </div>
+
+  <div class="field">
+    <%= f.label :crohns_disease %>
+    <%= f.check_box :crohns_disease %>
+  </div>
+
+  <div class="field">
+    <%= f.label :diabetes %>
+    <%= f.check_box :diabetes %>
+  </div>
+
+  <div class="field">
+    <%= f.label :emphysema %>
+    <%= f.check_box :emphysema %>
+  </div>
+
+  <div class="field">
+    <%= f.label :epilepsy %>
+    <%= f.check_box :epilepsy %>
+  </div>
+
+  <div class="field">
+    <%= f.label :goiter %>
+    <%= f.check_box :goiter %>
+  </div>
+
+  <div class="field">
+    <%= f.label :heart_murmur %>
+    <%= f.check_box :heart_murmur %>
+  </div>
+
+  <div class="field">
+    <%= f.label :heart_problems %>
+    <%= f.check_box :heart_problems %>
+  </div>
+
+  <div class="field">
+    <%= f.label :hepatitis %>
+    <%= f.check_box :hepatitis %>
+  </div>
+
+  <div class="field">
+    <%= f.label :high_blood_pressure %>
+    <%= f.check_box :high_blood_pressure %>
+  </div>
+
+  <div class="field">
+    <%= f.label :high_cholesterol %>
+    <%= f.check_box :high_cholesterol %>
+  </div>
+
+  <div class="field">
+    <%= f.label :hiv_aids %>
+    <%= f.check_box :hiv_aids %>
+  </div>
+
+  <div class="field">
+    <%= f.label :hypothyroidism %>
+    <%= f.check_box :hypothyroidism %>
+  </div>
+
+  <div class="field">
+    <%= f.label :jaundice %>
+    <%= f.check_box :jaundice %>
+  </div>
+
+  <div class="field">
+    <%= f.label :kidney_disease %>
+    <%= f.check_box :kidney_disease %>
+  </div>
+
+  <div class="field">
+    <%= f.label :kidney_stones %>
+    <%= f.check_box :kidney_stones %>
+  </div>
+
+  <div class="field">
+    <%= f.label :leukemia %>
+    <%= f.check_box :leukemia %>
+  </div>
+
+  <div class="field">
+    <%= f.label :pneumonia %>
+    <%= f.check_box :pneumonia %>
+  </div>
+
+  <div class="field">
+    <%= f.label :psoriasis %>
+    <%= f.check_box :psoriasis %>
+  </div>
+
+  <div class="field">
+    <%= f.label :pulmonary_embolism %>
+    <%= f.check_box :pulmonary_embolism %>
+  </div>
+
+  <div class="field">
+    <%= f.label :rheumatic_fever %>
+    <%= f.check_box :rheumatic_fever %>
+  </div>
+
+  <div class="field">
+    <%= f.label :stomach_peptic_ulcer %>
+    <%= f.check_box :stomach_peptic_ulcer %>
+  </div>
+
+  <div class="field">
+    <%= f.label :stroke %>
+    <%= f.check_box :stroke %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tuberculosis %>
+    <%= f.check_box :tuberculosis %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

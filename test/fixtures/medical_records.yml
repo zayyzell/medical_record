@@ -1,0 +1,63 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  anemia: false
+  angina: false
+  asthma: false
+  cancer: MyText
+  cataracts: false
+  colities: false
+  crohns_disease: false
+  diabetes: false
+  emphysema: false
+  epilepsy: false
+  goiter: false
+  heart_murmur: false
+  heart_problems: false
+  hepatitis: false
+  high_blood_pressure: false
+  high_cholesterol: false
+  hiv_aids: false
+  hypothyroidism: false
+  jaundice: false
+  kidney_disease: false
+  kidney_stones: false
+  leukemia: false
+  pneumonia: false
+  psoriasis: false
+  pulmonary_embolism: false
+  rheumatic_fever: false
+  stomach_peptic_ulcer: false
+  stroke: false
+  tuberculosis: false
+
+two:
+  anemia: false
+  angina: false
+  asthma: false
+  cancer: MyText
+  cataracts: false
+  colities: false
+  crohns_disease: false
+  diabetes: false
+  emphysema: false
+  epilepsy: false
+  goiter: false
+  heart_murmur: false
+  heart_problems: false
+  hepatitis: false
+  high_blood_pressure: false
+  high_cholesterol: false
+  hiv_aids: false
+  hypothyroidism: false
+  jaundice: false
+  kidney_disease: false
+  kidney_stones: false
+  leukemia: false
+  pneumonia: false
+  psoriasis: false
+  pulmonary_embolism: false
+  rheumatic_fever: false
+  stomach_peptic_ulcer: false
+  stroke: false
+  tuberculosis: false
