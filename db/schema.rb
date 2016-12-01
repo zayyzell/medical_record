@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161201155056) do
+ActiveRecord::Schema.define(version: 20161201214034) do
+
+  create_table "medical_events", force: :cascade do |t|
+    t.string   "date"
+    t.text     "description"
+    t.string   "provider"
+    t.integer  "medical_record_id"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.index ["medical_record_id"], name: "index_medical_events_on_medical_record_id"
+  end
 
   create_table "medical_records", force: :cascade do |t|
     t.boolean  "anemia"
@@ -44,6 +54,17 @@ ActiveRecord::Schema.define(version: 20161201155056) do
     t.boolean  "tuberculosis"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_medical_records_on_user_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "password_digest"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
 end

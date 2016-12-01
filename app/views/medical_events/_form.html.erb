@@ -1,0 +1,37 @@
+<%= form_for(medical_event) do |f| %>
+  <% if medical_event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(medical_event.errors.count, "error") %> prohibited this medical_event from being saved:</h2>
+
+      <ul>
+      <% medical_event.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :date %>
+    <%= f.text_field :date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :provider %>
+    <%= f.text_field :provider %>
+  </div>
+
+  <div class="field">
+    <%= f.label :medical_record_id %>
+    <%= f.text_field :medical_record_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

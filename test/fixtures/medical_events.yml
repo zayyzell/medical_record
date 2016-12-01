@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: MyString
+  description: MyText
+  provider: MyString
+  medical_record: one
+
+two:
+  date: MyString
+  description: MyText
+  provider: MyString
+  medical_record: two

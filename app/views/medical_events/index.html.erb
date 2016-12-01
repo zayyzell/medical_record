@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Medical Events</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Description</th>
+      <th>Provider</th>
+      <th>Medical record</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @medical_events.each do |medical_event| %>
+      <tr>
+        <td><%= medical_event.date %></td>
+        <td><%= medical_event.description %></td>
+        <td><%= medical_event.provider %></td>
+        <td><%= medical_event.medical_record %></td>
+        <td><%= link_to 'Show', medical_event %></td>
+        <td><%= link_to 'Edit', edit_medical_event_path(medical_event) %></td>
+        <td><%= link_to 'Destroy', medical_event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Medical Event', new_medical_event_path %>

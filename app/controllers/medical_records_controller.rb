@@ -1,10 +1,13 @@
 class MedicalRecordsController < ApplicationController
   before_action :set_medical_record, only: [:show, :edit, :update, :destroy]
-
+  before_action :require_logged_in
   # GET /medical_records
   # GET /medical_records.json
   def index
-    @medical_records = MedicalRecord.all
+    @medical_record = current_user.medical_record
+    if @medical_record.nil?
+      @medical_record = MedicalRecord.new(user: current_user)
+    end
   end
 
   # GET /medical_records/1
@@ -14,7 +17,7 @@ class MedicalRecordsController < ApplicationController
 
   # GET /medical_records/new
   def new
-    @medical_record = MedicalRecord.new
+    @medical_record = current_user.medical_record.new
   end
 
   # GET /medical_records/1/edit
@@ -24,7 +27,7 @@ class MedicalRecordsController < ApplicationController
   # POST /medical_records
   # POST /medical_records.json
   def create
-    @medical_record = MedicalRecord.new(medical_record_params)
+    @medical_record = current_user.medical_record.new(medical_record_params)
 
     respond_to do |format|
       if @medical_record.save
@@ -64,7 +67,7 @@ class MedicalRecordsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_medical_record
-      @medical_record = MedicalRecord.find(params[:id])
+      @medical_record = current_user.medical_record
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
