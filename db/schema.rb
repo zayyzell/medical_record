@@ -10,10 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161201214034) do
+ActiveRecord::Schema.define(version: 20161202191755) do
 
   create_table "medical_events", force: :cascade do |t|
-    t.string   "date"
+    t.date     "date"
     t.text     "description"
     t.string   "provider"
     t.integer  "medical_record_id"
@@ -55,6 +55,18 @@ ActiveRecord::Schema.define(version: 20161201214034) do
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
     t.integer  "user_id"
+    t.string   "name"
+    t.date     "dob"
+    t.string   "language"
+    t.integer  "phone_1"
+    t.integer  "phone_2"
+    t.string   "emer_contact_name"
+    t.string   "prim_phys_name"
+    t.integer  "prim_phys_no"
+    t.string   "health_iss_name"
+    t.string   "health_iss_no"
+    t.string   "health_mem_id"
+    t.integer  "emer_contact_no"
     t.index ["user_id"], name: "index_medical_records_on_user_id"
   end
 
