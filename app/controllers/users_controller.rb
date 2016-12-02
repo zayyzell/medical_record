@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     @user = User.new user_params
     return render action: 'new' unless @user.save
     session[:user_id] = @user.id
-    redirect_to medical_records_path, notice: 'Created user'
+    redirect_to user_medical_record_path(@user), notice: 'Created user'
   end
 
   private

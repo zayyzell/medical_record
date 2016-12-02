@@ -1,4 +1,4 @@
-<%= form_for(medical_event) do |f| %>
+<%= form_for([current_user.medical_record, medical_event]) do |f| %>
   <% if medical_event.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(medical_event.errors.count, "error") %> prohibited this medical_event from being saved:</h2>
@@ -26,10 +26,10 @@
     <%= f.text_field :provider %>
   </div>
 
-  <div class="field">
-    <%= f.label :medical_record_id %>
-    <%= f.text_field :medical_record_id %>
-  </div>
+  <!-- <div class="field"> -->
+    <%#= f.label :medical_record_id %>
+    <%#= f.text_field :medical_record_id %>
+  <!-- </div> -->
 
   <div class="actions">
     <%= f.submit %>

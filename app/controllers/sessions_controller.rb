@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
                 try(:authenticate, params[:password])
     return render action: 'new' unless @user
     session[:user_id] = @user.id
-    redirect_to medical_records_path
+    redirect_to user_medical_record_path(@user)
   end
 
   def destroy

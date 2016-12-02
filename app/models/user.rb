@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   has_secure_password
   has_one :medical_record
-  has_many :medical_events; through :medical_record
+  has_many :medical_events, through: :medical_record
 
   after_create :create_medical_record
 

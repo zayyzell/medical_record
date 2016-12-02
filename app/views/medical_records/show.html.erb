@@ -145,5 +145,26 @@
   <%= @medical_record.tuberculosis %>
 </p>
 
-<%= link_to 'Edit', edit_medical_record_path(@medical_record) %> |
-<%= link_to 'Back', medical_records_path %>
+<%= link_to 'Edit', edit_user_medical_record_path(current_user) %> |
+<%= link_to 'New Medical Event', new_medical_record_medical_event_path(current_user) %>
+
+<h2>Medical Events</h2>
+<% @medical_record.medical_events.each do |medical_event| %>
+  <!-- <%= medical_event.date %>
+  <%= medical_event.description %>
+  <%= medical_event.provider %> -->
+  <p>
+    <strong>Date:</strong>
+    <%= medical_event.date %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= medical_event.description %>
+  </p>
+
+  <p>
+    <strong>Provider:</strong>
+    <%= medical_event.provider %>
+  </p>
+<% end %>

@@ -45,7 +45,7 @@ class MedicalRecordsController < ApplicationController
   def update
     respond_to do |format|
       if @medical_record.update(medical_record_params)
-        format.html { redirect_to @medical_record, notice: 'Medical record was successfully updated.' }
+        format.html { redirect_to user_medical_record_path(current_user), notice: 'Medical record was successfully updated.' }
         format.json { render :show, status: :ok, location: @medical_record }
       else
         format.html { render :edit }

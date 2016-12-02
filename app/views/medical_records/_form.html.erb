@@ -1,4 +1,4 @@
-<%= form_for(medical_record) do |f| %>
+<%= form_for(medical_record, url: [current_user, :medical_record]) do |f| %>
   <% if medical_record.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(medical_record.errors.count, "error") %> prohibited this medical_record from being saved:</h2>
