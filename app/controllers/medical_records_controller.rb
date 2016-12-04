@@ -72,6 +72,6 @@ class MedicalRecordsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def medical_record_params
-      params.require(:medical_record).permit(:anemia, :angina, :asthma, :cancer, :cataracts, :colities, :crohns_disease, :diabetes, :emphysema, :epilepsy, :goiter, :heart_murmur, :heart_problems, :hepatitis, :high_blood_pressure, :high_cholesterol, :hiv_aids, :hypothyroidism, :jaundice, :kidney_disease, :kidney_stones, :leukemia, :pneumonia, :psoriasis, :pulmonary_embolism, :rheumatic_fever, :stomach_peptic_ulcer, :stroke, :tuberculosis)
+      params.require(:medical_record).permit(:name, :dob, :language, :phone_1, :phone_2, :emer_contact_name, :prim_phys_name, :prim_phys_no, :health_iss_name, :health_iss_no, :health_mem_id, :anemia, :angina, :asthma, :cancer, :cataracts, :colities, :crohns_disease, :diabetes, :emphysema, :epilepsy, :goiter, :heart_murmur, :heart_problems, :hepatitis, :high_blood_pressure, :high_cholesterol, :hiv_aids, :hypothyroidism, :jaundice, :kidney_disease, :kidney_stones, :leukemia, :pneumonia, :psoriasis, :pulmonary_embolism, :rheumatic_fever, :stomach_peptic_ulcer, :stroke, :tuberculosis)
     end
 end

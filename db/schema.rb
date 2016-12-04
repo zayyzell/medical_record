@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161202191755) do
+ActiveRecord::Schema.define(version: 20161204191830) do
 
   create_table "medical_events", force: :cascade do |t|
     t.date     "date"
@@ -52,21 +52,21 @@ ActiveRecord::Schema.define(version: 20161202191755) do
     t.boolean  "stomach_peptic_ulcer"
     t.boolean  "stroke"
     t.boolean  "tuberculosis"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
     t.integer  "user_id"
     t.string   "name"
     t.date     "dob"
     t.string   "language"
-    t.integer  "phone_1"
-    t.integer  "phone_2"
+    t.integer  "phone_1",              limit: 8
+    t.integer  "phone_2",              limit: 8
     t.string   "emer_contact_name"
     t.string   "prim_phys_name"
-    t.integer  "prim_phys_no"
+    t.integer  "prim_phys_no",         limit: 8
     t.string   "health_iss_name"
     t.string   "health_iss_no"
     t.string   "health_mem_id"
-    t.integer  "emer_contact_no"
+    t.integer  "emer_contact_no",      limit: 8
     t.index ["user_id"], name: "index_medical_records_on_user_id"
   end
 
